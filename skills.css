@@ -1,0 +1,218 @@
+.skills-section {
+    padding: 120px 8%;
+    background: #0b0b0b;
+    color: #fff;
+}
+
+.skills-section h1 {
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 80px;
+    color: #00e5ff;
+}
+
+.skills-section h2 {
+    font-size: 26px;
+    margin: 60px 0 30px;
+    color: #ccc;
+}
+
+/* GRID */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+.skill-card {
+    background: #111;
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(0,229,255,0.05);
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 40px rgba(0,229,255,0.3);
+}
+
+/* ICON */
+.skill-card i {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #00e5ff;
+}
+
+/* TITLE */
+.skill-card h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* BAR */
+.bar {
+    width: 100%;
+    height: 8px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #00e5ff, #1e90ff);
+    animation: load 2s forwards;
+}
+
+/* LEVELS */
+.progress.html { width: 80%; }
+.progress.js { width: 10%; }
+.progress.python { width: 85%; }
+.progress.figma { width: 70%; }
+
+/* SMALL TOOL CARDS */
+.skill-card.small {
+    padding: 25px;
+}
+
+/* PERCENT */
+.skill-card span {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ANIMATION */
+@keyframes load {
+    from { width: 0; }
+}
+/* CERTIFICATES SECTION */
+/* CERTIFICATIONS */
+.cert-container {
+    position: relative;
+    width: 100%;
+    height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* CARD */
+.cert-card {
+    position: absolute;
+    width: 650px;      /* LARGE */
+    height: 380px;     /* HAUT */
+    border-radius: 25px;
+    overflow: hidden;
+    background: #0b0b0b;
+    filter: grayscale(100%);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.8s ease;
+    box-shadow: 0 0 30px rgba(0,229,255,0.15);
+}
+
+/* ACTIVE */
+.cert-card.active {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1);
+    box-shadow:
+        0 0 40px rgba(0,229,255,0.5),
+        0 0 90px rgba(0,229,255,0.25);
+}
+
+/* IMAGE */
+.cert-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #f1f1f16c; /* blanc adouci */
+    filter: brightness(0.9) contrast(1.02);
+}
+
+
+/* TITLE */
+.cert-card span {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 14px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(0, 0, 0, 0.212);
+    color: #00e5ff;
+}
+.cert-counter {
+    margin-top: 25px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #aaa;
+    letter-spacing: 2px;
+}
+
+.cert-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 45px;
+    color: #00e5ff;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.cert-arrow:hover {
+    color: white;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.cert-arrow.left {
+    left: 30px;
+}
+
+.cert-arrow.right {
+    right: 30px;
+}
+
+
+
+
+
+
+/* esssaiiii */
+
+
+
+.skills-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px 120px;
+    background: #0b0b0b;
+    color: #fff;
+}
+/*2 sa yo m mete pou skills lan byen paret
+.snap-long {
+    height: auto;
+    min-height: 100vh;
+    scroll-snap-align: none;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.snap-container {
+    height: auto;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+}*/

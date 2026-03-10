@@ -1,0 +1,267 @@
+/* LEFT SIDE */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+
+
+.hero-left {
+    width: 50%;
+    /*pou texte lan ka anba portfolio an"*/
+    transform: translateX(-40px);
+
+
+    
+    
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.intro {
+    font-size: 26px;
+    color: #00e5ff;
+    font-weight: 500;
+}
+
+.name {
+    font-size: 48px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.description {
+    width: 85%;
+    font-size: 18px;
+    color: #d1d1d1;
+    margin-bottom: 30px;
+}
+
+/* ICÔNES , gen 2 changement jodi 27 janvier an, padding rightse premier an*/
+.contact-icons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    /*padding-right: 500px;*/
+}
+
+.contact-icons a {
+    font-size: 28px;
+    color: white;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    transform: translateY(-6px);
+    color: #6a5cff;
+}
+
+/* CV BUTTON */
+.cv-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 22px;
+    background: #00e5ff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cv-button:hover {
+    background: #00b8d4;
+}
+
+/* RIGHT SIDE PHOTO, jodi 27 janvier an, 2e changement nan margin left */
+.hero-right {
+    width: 50%;
+    text-align: center;
+    /*margin-left: 300px;*/
+}
+
+.photo-container {
+    width: 400px;
+    margin: auto;
+    border-radius: 50%;
+    padding: 8px;
+    
+    background: radial-gradient(circle, #00e5ff40 0%, #00e5ff10 70%, transparent 100%);
+}
+
+.profile-photo {
+    width: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 20px #00e5ff);
+}
+
+
+
+/*
+.section-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}*/
+
+/* Ajout pou kontwole espacement ak aliman an selon cpt, paske foto a te two a droite */
+
+
+
+.section-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1220px;    /*🔥 limite la largeur totale */
+    margin: 0 auto;     /* 🔥 centre le bloc */
+    padding: 0 40px;    /* 🔥 respiration latérale */
+    gap: 360px;         /* 🔥 ESPACEMENT texte ↔ photo */
+}
+
+
+
+
+
+
+
+
+/* TEXTE ANIMATION  pour la page accueil genie informatique et l'autre*/
+
+.hero-intro {
+    font-family: 'Fira Code', monospace;
+    font-size: 30px;          /* 👈 augmente ici */
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero-role {
+    font-family: 'Fira Code', monospace;
+    font-size: 30px;          /* 👈 augmente ici */
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+.hero-name {
+    font-family: "Times New Roman", serif;
+    font-size: 48px;
+    margin: 10px 0;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    display: inline-block;   /* 🔥 stabilise la largeur */
+}
+#typed-text {
+    white-space: nowrap;     /* 🔥 empêche le retour à la ligne */
+    display: inline-block;   /* 🔥 stabilise la largeur */
+}
+
+
+.cyan {
+    color: #00e5ff;
+}
+
+
+#cursor {
+    display: inline-block;
+    margin-left: 3px;
+    width: 2px;
+    height: 1em;
+    background: #00e5ff;
+    animation: blink 1s infinite;
+    vertical-align: bottom;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+
+
+
+
+
+
+
+
+/* Essai pou gade sa sa ap bay : sa se sa cpt ban mwen pou responsive home lan */
+
+
+/* =========================
+   RESPONSIVE HOME (PRO)
+========================= */
+
+@media (max-width: 1024px) {
+    .section-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 30px;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        margin: 0;
+    }
+
+    .contact-icons {
+        justify-content: center;
+        padding-right: 0;
+    }
+
+    .photo-container {
+        width: 280px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-name {
+        font-size: 2rem;
+        white-space: normal; /* Autorise retour à la ligne */
+    }
+
+    .hero-intro,
+    .hero-role {
+        font-size: 1.1rem;
+    }
+
+    .profile-photo {
+        max-width: 220px;
+    }
+
+    .cv-button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+

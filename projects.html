@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects - Debertho Lentz BELLEGARDE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/projects.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR (identique aux autres pages) -->
+<header>
+    <nav class="navbar">
+        <div class="logo">Portfolio<span class="cyan">.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html">Skills</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- PROJECTS SECTION -->
+<section class="projects-section">
+
+    <h1>Projects</h1>
+    <p class="subtitle">Quelques projets qui illustrent mon parcours et mes compétences.</p>
+
+    <div class="projects-grid">
+
+        <!-- PROJECT 1 -->
+        <div class="project-card reveal">
+            <div class="project-image">
+                <img src="assets/projects/whatsapp-figma.jpeg" alt="WhatsApp Clone Figma">
+                <div class="overlay">
+                    <a href="https://www.figma.com/proto/3VDNqFh99DIAgirMORE2SN/Whatsapp_clone?node-id=2-5&p=f&t=mFP6AjjMVHJCx3Ph-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=2%3A5" target="_blank" class="btn">Voir le design</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>WhatsApp Clone</h3>
+                <span class="type">Figma / UI Design</span>
+                <p>
+                    Reproduction fidèle de l’interface WhatsApp avec un accent sur l’UX,
+                    les animations et la hiérarchie visuelle.
+                </p>
+                <div class="tech">
+                    <i class="fab fa-figma"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="project-card reveal">
+            <div class="project-image">
+                <img src="assets/projects/konesans-python.jpeg" alt="Konesans Lakay Python">
+                
+                <div class="overlay">
+                    <button class="btn"
+                            id="openDemo">
+                        Voir la démo
+                    </button>
+
+                    <!--video id="demoVideo" width="600" controls style="display:none; margin-top:20px;"-->
+                    
+
+                    <a href="https://github.com/DeberthoCF/Flashcard_2" target="_blank" class="btn outline">
+                        Code source
+                    </a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Konesans Lakay</h3>
+                <span class="type">Python / Jeu éducatif</span>
+                <p>
+                    Jeu interactif basé sur la culture générale et les connaissances locales,
+                    avec une logique de jeu dynamique.
+                </p>
+                <div class="tech">
+                    <i class="fab fa-python"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div class="project-card reveal">
+            <div class="project-image">
+                <img src="assets/projects/konesans-figma.jpeg" alt="Konesans Lakay Figma">
+                <div class="overlay">
+                    <a href="https://www.figma.com/proto/KiFKoznv3oStUEqSNQgItv/Untitled?node-id=20-53&starting-point-node-id=20%3A53&t=wnBKb0t1dr4GWO6g-1" target="_blank" class="btn">Voir le design</a>
+                </div>
+            </div>
+            <div class="project-content">
+                <h3>Konesans Lakay</h3>
+                <span class="type">Figma / Mobile App</span>
+                <p>
+                    Conception UI/UX d’une application mobile éducative mettant en valeur
+                    la culture locale.
+                </p>
+                <div class="tech">
+                    <i class="fab fa-figma"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!--script>
+function showVideo() {
+    const video = document.getElementById("demoVideo");
+    video.style.display = "block";
+    video.play();
+}
+</script-->
+<!-- VIDEO MODAL -->
+
+    
+</div>
+<!-- VIDEO MODAL -->
+<!-- VIDEO MODAL -->
+<div class="video-modal" id="videoModal">
+    <span class="close-video">&times;</span>
+    <video id="projectVideo" controls>
+        <source src="" type="video/mp4">
+    </video>
+</div>
+
+
+<script>
+const modal = document.getElementById('videoModal');
+const video = document.getElementById('projectVideo');
+const source = video.querySelector('source');
+const closeBtn = document.querySelector('.close-video');
+
+document.getElementById('openDemo').addEventListener('click', () => {
+    source.src = "assets/videos/konesans-python.mp4";
+    video.load();
+    modal.style.display = 'flex';
+    video.play();
+});
+
+closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    video.pause();
+    source.src = '';
+});
+</script>
+
+
+
+
+</body>
+</html>

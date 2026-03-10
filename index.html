@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debertho Lentz BELLEGARDE - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/contact.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+
+    
+    
+</head>
+
+
+
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">Portfolio<span class="cyan">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<!-- J'ai mis ce qui fonctionait dans un autre fichier , celui d'a droite, en bas  numero 145 -->
+
+
+
+
+<main class="snap-container">
+    
+
+    <section id="home" class="snap" >
+       <div class="section-container">
+        <div class="hero-left">
+             
+            <p class="hero-intro">Bienvenue, je suis</p>
+
+            <h1 class="hero-name">
+                Debertho L. <span class="cyan">BELLEGARDE</span>
+            </h1>
+
+            <p class="hero-role">
+             Étudiant en <span id="typed-text"></span><span id="cursor"></span>
+            </p>
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="contact-icons">
+                <a href="https://github.com/DeberthoCF" target="_blank">
+                   <i class="fab fa-github"></i>
+                </a>
+
+        
+
+                <a href="https://www.linkedin.com/in/debertho-lentz-bellegarde-232b333a1/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+
+            <a class="cv-button" href="downloads/CV_BELLEGARDE_2024(4).pdf" download>Télécharger mon CV</a>
+        </div>
+
+        <div class="hero-right">
+            <div class="photo-container">
+                <img src="assets/img/profile.jpg" alt="Debertho Photo" class="profile-photo">
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="snap-long">
+        <div id="about-container"></div>
+    </section>
+
+    <section id="skills" class="snap-long">
+        <div id="skills-container"></div>
+    </section>
+
+    <section id="projects" class="snap-long">
+        <div id="projects-container"></div>
+    </section>
+
+    <section id="contact" class="snap-long">
+        <div id="contact-container"></div>
+    </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--script>
+    /* section et navlink sont censes avoir des "s" apres const ,mais je vois que ca marche, i leit it like this*/
+const sectionis = document.querySelectorAll("section");
+const navLinkis  = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sectionis.forEach(sectioni => {
+        const sectioniTop = sectioni.offsetTop;
+        const sectioniHeight = sectioni.clientHeight;
+
+        if (scrollY >= sectioniTop - sectioniHeight / 2) {
+            current = sectioni.getAttribute("id");
+        }
+    });
+
+    navLinkis.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+</script-->
+
+
+
+
+<script>
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-link");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections.forEach(section => {
+        const top = section.offsetTop - 120; // navbar offset
+        const height = section.offsetHeight;
+
+        if (scrollY >= top && scrollY < top + height) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Effet de machine à écrire pour genie infor &front -->
+
+
+
+<script>
+/*const words = [
+    "Génie informatique.",
+    "Développement front-end."
+    
+];*/
+
+const words = [
+    "Génie informatique.",
+    "Développement front-end.",
+    
+];
+
+
+
+
+
+
+
+
+const typedText = document.getElementById("typed-text");
+const cursor = document.getElementById("cursor");
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function typeLoop() {
+    const currentWord = words[wordIndex];
+
+    if (!isDeleting) {
+        typedText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+
+        if (charIndex === currentWord.length) {
+            setTimeout(() => isDeleting = true, 1300); // pause à la fin
+        }
+    } else {
+        typedText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+
+        if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+
+    setTimeout(typeLoop, isDeleting ? 60 : 90);
+}
+
+typeLoop();
+</script>
+
+
+
+
+<script>
+fetch('skills-content.html')
+    .then(res => {
+        if (!res.ok) {
+            throw new Error('Erreur chargement skills-content.html');
+        }
+        return res.text();
+    })
+    .then(html => {
+        document.getElementById('skills-container').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = 'js/skills.js';
+        script.defer = true;
+        document.body.appendChild(script);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+</script>
+
+
+<script>
+fetch('about-content.html')
+    .then(res => {
+        if (!res.ok) {
+            throw new Error('Erreur chargement about-content.html');
+        }
+        return res.text();
+    })
+    .then(html => {
+        document.getElementById('about-container').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = 'js/about.js';
+        script.defer = true;
+        document.body.appendChild(script);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+</script>
+
+<script>
+fetch('projects-content.html')
+    .then(res => {
+        if (!res.ok) {
+            throw new Error('Erreur chargement projects-content.html');
+        }
+        return res.text();
+    })
+    .then(html => {
+        document.getElementById('projects-container').innerHTML = html;
+
+        const script = document.createElement('script');
+        script.src = 'js/projects.js';
+        script.defer = true;
+        document.body.appendChild(script);
+    })
+    .catch(err => {
+        console.error(err);
+    });
+</script>
+
+
+<script>
+fetch('contact-content.html')
+    .then(res => res.text())
+    .then(html => {
+        document.getElementById('contact-container').innerHTML = html;
+
+        // 🔥 Lancement de l’animation APRÈS injection
+        /*startTypewriter(
+            "Merci de votre visite. À bientôt.",
+            "text",
+            "cursor",
+            180
+        );*/
+    })
+    .catch(console.error);
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+function startTypewriter(text, targetId, cursorId, speed = 150) {
+    const target = document.getElementById(targetId);
+    const cursor = document.getElementById(cursorId);
+
+    if (!target || !cursor) return;
+
+    target.textContent = "";
+    let index = 0;
+
+    function type() {
+        if (index < text.length) {
+            target.textContent += text.charAt(index);
+            index++;
+            setTimeout(type, speed);
+        } else {
+            cursor.style.animation = "none";
+            cursor.style.opacity = "1";
+        }
+    }
+
+    type();
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+let contactAnimationPlayed = false;
+
+function triggerContactAnimation() {
+    if (contactAnimationPlayed) return;
+
+    startTypewriter(
+        "Merci de votre visite. À bientôt.",
+        "text",
+        "cursor",
+        180
+    );
+
+    contactAnimationPlayed = true;
+}
+
+// 🎯 Déclenchement au SCROLL (quand Contact est visible)
+const contactSection = document.getElementById("contact");
+
+const contactObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            triggerContactAnimation();
+        }
+    });
+}, {
+    threshold: 0.5 // 50% visible
+});
+
+if (contactSection) {
+    contactObserver.observe(contactSection);
+}
+
+// 🎯 Déclenchement au CLIC
+document.querySelectorAll('a[href="#contact"]').forEach(link => {
+    link.addEventListener("click", () => {
+        setTimeout(triggerContactAnimation, 400);
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--script>
+let contactAnimationPlayed = false;
+
+document.querySelectorAll('a[href="#contact"]').forEach(link => {
+    link.addEventListener("click", () => {
+
+        // Évite de rejouer l’animation si on reclique
+        if (contactAnimationPlayed) return;
+
+        // Petit délai pour laisser le scroll finir
+        setTimeout(() => {
+            startTypewriter(
+                "Merci de votre visite. À bientôt.",
+                "text",
+                "cursor",
+                180
+            );
+            contactAnimationPlayed = true;
+        }, 400);
+    });
+});
+</script-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+
+
+</html>

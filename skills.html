@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Debertho Lentz BELLEGARDE</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/skills.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+    <nav class="navbar">
+        <div class="logo">Portfolio<span class="cyan">.</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="skills.html" class="active">Skills</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- SKILLS SECTION -->
+<section class="skills-section">
+    <h1>Skills & Technologies</h1>
+
+    <!-- FRONT-END -->
+    <h2>Front-End Development</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <i class="fab fa-html5"></i>
+            <h3>HTML / CSS</h3>
+            <div class="bar"><div class="progress html"></div></div>
+            <span>80%</span>
+        </div>
+
+        <div class="skill-card">
+            <i class="fab fa-js"></i>
+            <h3>JavaScript / React / Node</h3>
+            <div class="bar"><div class="progress js"></div></div>
+            <span>10%</span>
+        </div>
+    </div>
+
+    <!-- BACKEND / PYTHON -->
+    <h2>Programming</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <i class="fab fa-python"></i>
+            <h3>Python</h3>
+            <div class="bar"><div class="progress python"></div></div>
+            <span>85%</span>
+        </div>
+    </div>
+
+    <!-- DESIGN -->
+    <h2>Design (Hobby)</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card">
+            <i class="fab fa-figma"></i>
+            <h3>Figma / UI-UX</h3>
+            <div class="bar"><div class="progress figma"></div></div>
+            <span>70%</span>
+        </div>
+    </div>
+
+    <!-- TOOLS -->
+    <h2>Tools</h2>
+
+    <div class="skills-grid">
+        <div class="skill-card small">
+            <i class="fab fa-git-alt"></i>
+            <h3>Git / GitHub</h3>
+        </div>
+
+        <div class="skill-card small">
+            <i class="fas fa-code"></i>
+            <h3>VS Code</h3>
+        </div>
+    </div>
+<!-- CERTIFICATES -->
+
+
+<h2>Certifications</h2>
+
+
+
+<div class="cert-container">
+
+    <button class="cert-arrow left" id="prevCert">&#10094;</button>
+
+    <div class="cert-card active">
+        <img src="assets/certificates/python.jpeg">
+        <span>Python</span>
+    </div>
+
+    <div class="cert-card">
+        <img src="assets/certificates/c.jpeg">
+        <span>Introduction to C</span>
+    </div>
+
+    <div class="cert-card">
+        <img src="assets/certificates/marketing-ia.jpeg">
+        <span>Marketing Digital & IA</span>
+    </div>
+
+    <div class="cert-card">
+        <img src="assets/certificates/dups.jpeg">
+        <span>DUPS</span>
+    </div>
+
+    <button class="cert-arrow right" id="nextCert">&#10095;</button>
+
+</div>
+
+<div class="cert-counter" id="certCounter">1 / 4</div>
+
+
+
+
+
+
+</section>
+<script>
+const certs = document.querySelectorAll('.cert-card');
+const counter = document.getElementById('certCounter');
+const prevBtn = document.getElementById('prevCert');
+const nextBtn = document.getElementById('nextCert');
+
+let current = 0;
+const total = certs.length;
+
+function showCert(index) {
+    certs.forEach(cert => cert.classList.remove('active'));
+    certs[index].classList.add('active');
+    counter.textContent = `${index + 1} / ${total}`;
+}
+
+nextBtn.addEventListener('click', () => {
+    current = (current + 1) % total;
+    showCert(current);
+});
+
+prevBtn.addEventListener('click', () => {
+    current = (current - 1 + total) % total;
+    showCert(current);
+});
+</script>
+
+
+
+</body>
+</html>
