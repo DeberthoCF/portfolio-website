@@ -9,4 +9,4 @@ The website was built using HTML, CSS, and JavaScript.
 You can visit the portfolio here:
 https://USERNAME.github.io/portfolio-website
 
-![Web Demo](demo.gif)
+![Game Demo](demo.gif)
