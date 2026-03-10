@@ -8,3 +8,5 @@ The website was built using HTML, CSS, and JavaScript.
 ## Website
 You can visit the portfolio here:
 https://USERNAME.github.io/portfolio-website
+
+![Web Demo](demo.gif)
